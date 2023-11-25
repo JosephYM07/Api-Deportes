@@ -309,7 +309,7 @@ main {
 
 .icon1:hover > a > img {
   rotate: 360deg;
-  background: linear-gradient(to left, rgb(77, 228, 122), #333333);
+  background: linear-gradient(to left, rgb(77, 193, 228), #333333);
 }
 .icon2:hover > a > img {
   rotate: 360deg;
