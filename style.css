@@ -59,6 +59,23 @@ li {
   --footer-bg-color: #040d12;
 }
 
+/***** Theme *****/
+
+:root {
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  /* --bg-color: #ffffff; */
+  --bg-color: #f7fcff;
+  --heading-color: #000a19;
+  --hero-heading-color: #003b99;
+  --white-color: #ffffff;
+  --para-color: #504e4d;
+  --bnt-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --footer-bg-color: #040d12;
+}
+
 /***** Theme End *****/
 
 /***** Layout *****/
@@ -103,6 +120,10 @@ li {
 
 .grid-three--cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /***** module / reusable *****/
@@ -197,31 +218,32 @@ li {
 main {
   position: relative;
   background-image: linear-gradient(
-    to top right,
-    #3d86fa,
-    #4484fb,
-    #679eff,
-    #b3d2ff,
+    to bottom right,
+    #0842b6,
+    #5184eb,
+    #f04a4a,
+    #ddd44f,
+    #8fb6f1,
     #ebf3fe
   );
 }
 
 .section-hero .grid {
   align-items: center;
-  gap: 6.4rem;
+  gap: 6.2rem;
 
   & .hero-subheading {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 1.7rem;
     word-spacing: 0.2rem;
-    color: var(--bnt-hover-bg-color);
+    color: rgb(2, 17, 58);
     font-weight: 700;
   }
 
   & .hero-heading {
     font-size: 5.8rem;
-    line-height: 1.5;
+    line-height: 1.1;
     font-family: "Jost";
     color: var(--hero-heading-color);
     font-weight: 900;
@@ -265,6 +287,7 @@ main {
 
 /***** End Hero Section *****/
 
+
 /***** About Section *****/
 
 .section-about .grid {
@@ -277,13 +300,25 @@ main {
 
 .section-about img {
   padding: 2.4rem;
-  background-color: var(--supporting-color);
+  background-color: rgb(241, 241, 241);
   width: 15rem;
   height: auto;
   border-radius: 50%;
   transition: all 0.3s linear;
 }
 
+.icon1:hover > img {
+  rotate: 360deg;
+  background: linear-gradient(to left, rgb(77, 228, 122), #333333);
+}
+.icon2:hover > img {
+  rotate: 360deg;
+  background: linear-gradient(to top, rgb(228, 168, 77), #303030);
+}
+.icon3:hover > img {
+  rotate: 360deg;
+  background: linear-gradient(to right, rgb(182, 252, 116), #292929);
+}
 .icon:hover > img {
   rotate: 360deg;
   background: linear-gradient(to right, #0575e6, #021b79);
@@ -584,55 +619,11 @@ textarea:focus-visible {
 
 footer {
   background-color: var(--footer-bg-color);
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
-footer * {
-  color: var(--white-color);
-}
 
-footer .grid {
-  text-align: right;
-}
 
-.footer-subheading {
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-.footer-1--div p {
-  margin: 1rem 0 2.2rem 0;
-}
-
-.footer-1--div {
-  text-align: left;
-
-  .social-footer--icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.4rem;
-    align-items: center;
-  }
-
-  & .fa-brands {
-    width: 5rem;
-    aspect-ratio: 1;
-    background-color: var(--supporting-color);
-    color: var(--bnt-hover-bg-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s linear;
-
-    &:hover {
-      color: var(--supporting-color);
-      background-color: var(--bnt-hover-bg-color);
-      rotate: 360deg;
-    }
-  }
-}
 
 /***** End Footer Section *****/
 
@@ -640,7 +631,7 @@ footer .grid {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.5rem;
 }
 
 /* Track */
