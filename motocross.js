@@ -1,3 +1,4 @@
+let tablaParticipantesVisible=true;
 function listaJugadores() {
   fetch('https://www.thesportsdb.com/api/v1/json/3/eventresults.php?id=652890')
     .then(response => response.json())
@@ -50,8 +51,16 @@ function listaJugadores() {
       tabla.style.margin = '0 auto';
       tabla.style.borderCollapse = 'collapse';
 
-      contenedor.innerHTML = ''; // Limpiar el contenido actual
-      contenedor.appendChild(tabla);
+      if (tablaParticipantesVisible) {
+        contenedor.innerHTML= '';
+        
+      } else {
+        contenedor.innerHTML= '';
+        contenedor.appendChild(tabla)
+      }
+  
+      tablaParticipantesVisible = !tablaParticipantesVisible;
+
     })
     .catch(e => console.log(e));
 }
@@ -103,8 +112,15 @@ function paisesParticipantes (){
     tabla.style.margin = '0 auto';
     tabla.style.borderCollapse = 'collapse';
 
-    contenedor.innerHTML = ''; // Limpiar el contenido actual
-    contenedor.appendChild(tabla);
+    if (tablaParticipantesVisible) {
+      contenedor.innerHTML= '';
+      
+    } else {
+      contenedor.innerHTML= '';
+      contenedor.appendChild(tabla)
+    }
+
+    tablaParticipantesVisible = !tablaParticipantesVisible;
   })
   .catch(e => console.log(e));
 }
