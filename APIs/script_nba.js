@@ -1,4 +1,4 @@
-const playerIds = [57, 237, 140, 132, 145,434,79,115,15,246];
+const playerIds = [57, 237, 140, 132, 145, 434, 79, 115, 15, 246];
 
 const options = {
   method: "GET",
@@ -73,4 +73,55 @@ async function fetchTopPlayers() {
 
 fetchTopPlayers();
 
-//script para estadisticas
+// //script para equipos
+const teamIds = [2, 4, 7, 9, 14, 18, 20, 23, 26, 28];
+
+const options2 = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "7bafb22023mshcdabcc00d3bd256p17b6a4jsnbf5a1f132a3c",
+    "X-RapidAPI-Host": "free-nba.p.rapidapi.com",
+  },
+};
+
+async function fetchTopTeams() {
+  const tableBody = document.getElementById("topTeamsTableBody");
+
+  for (const teamId of teamIds) {
+    const url = `https://free-nba.p.rapidapi.com/teams/${teamId}`;
+
+    try {
+      const response = await fetch(url, options2);
+      const result = await response.json();
+
+      console.log(result);
+
+      const teamRow = document.createElement("tr");
+
+      const { id, abbreviation, city, conference, division, full_name, name } =
+        result;
+
+      const cells = [
+        { text: id },
+        { text: abbreviation },
+        { text: city },
+        { text: conference },
+        { text: division },
+        { text: full_name },
+        { text: name },
+      ];
+
+      cells.forEach((cell) => {
+        const cellElement = document.createElement("td");
+        cellElement.textContent = cell.text;
+        teamRow.appendChild(cellElement);
+      });
+
+      tableBody.appendChild(teamRow);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
+
+fetchTopTeams();
