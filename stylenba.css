@@ -1,58 +1,114 @@
-body {
-  height: 100%;
-  margin: 0;
-  background: linear-gradient(45deg, #49a09d, #5f2c82);
-  font-family: sans-serif;
-  font-weight: 100;
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-h1 {
+/* Estilo para el título "Top 10 Mejores Jugadores de la NBA" */
+.section-top-players h2 {
+  color: #55608f;
+  font-size: 28px;
   text-align: center;
-  color: #fff;
+  margin-bottom: 20px;
 }
 
-table {
-  width: 70%;
-  margin: 20px auto 0 auto;
+/* Estilos para la tabla de los mejores jugadores de la NBA */
+.top-players-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   border-collapse: collapse;
-  overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   background: linear-gradient(45deg, #49a09d, #5f2c82);
-  font-family: sans-serif;
-  font-weight: 100;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-th,
-td {
+.top-players-table th,
+.top-players-table td {
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
+  font-size: 18px;
 }
 
-th {
+.top-players-table th {
   text-align: left;
-}
-
-thead th {
   background-color: #55608f;
 }
 
-tbody tr:hover {
+.top-players-table tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-tbody td {
+.top-players-table tbody td {
   position: relative;
 }
 
-tbody td:hover:before {
+.top-players-table tbody td:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+/*CSS EQUIPOS NBA*/
+/* Estilos para la tabla de los mejores equipos de la NBA */
+.top-teams-table {
+  width: 100%;
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centra la tabla en su contenedor */
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  border-radius: 10px; /* Añadido para redondear las esquinas de la tabla */
+  margin-top: 20px; /* Ajusta según sea necesario */
+}
+
+.top-teams-table th,
+.top-teams-table td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
+}
+
+/* Establecer tamaños específicos para las columnas */
+.Title-team {
+  color: #55608f;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.top-teams-table th.team-id {
+  width: 50px;
+}
+.top-teams-table th.team-name {
+  width: 150px;
+}
+.top-teams-table th.team-city {
+  width: 150px;
+}
+.top-teams-table th.team-conference {
+  width: 120px;
+}
+.top-teams-table th.team-division {
+  width: 120px;
+}
+
+.top-teams-table th {
+  text-align: left;
+  background-color: #55608f;
+}
+
+.top-teams-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.top-teams-table tbody td {
+  position: relative;
+}
+
+.top-teams-table tbody td:hover::before {
   content: "";
   position: absolute;
   left: 0;
