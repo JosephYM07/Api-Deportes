@@ -59,7 +59,7 @@ function listaJugadores() {
 
 document.getElementById('participantes').addEventListener('click', listaJugadores);
 document.getElementById('flecha-participantes').addEventListener('click', listaJugadores);
-  
+
 function paisesParticipantes (){
   fetch('https://www.thesportsdb.com/api/v1/json/3/eventresults.php?id=652890')
   .then(response => response.json())

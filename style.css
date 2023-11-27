@@ -731,4 +731,18 @@ footer {
   }
 }
 
+#flecha-participantes:hover {
+  cursor: pointer; 
+  color: blue; 
+  transform: rotate(360deg);
+  transition: transform 0.9s ease;
+}
+
+#flecha-paises:hover {
+  cursor: pointer; 
+  color: blue;
+  transform: rotate(360deg);
+  transition: transform 0.9s ease;
+}
+
 /***** End Media Queries Section *****/
