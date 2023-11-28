@@ -44,7 +44,7 @@ En esta sección, se exhiben imágenes representativas de cada deporte con descr
 #### 2.3 Motocross
 - Redirección a una página con tablas de posiciones y países participantes en un evento específico.
 
-<img src="url_ilustracion5" alt="Ilustración 5: Países que participaron en Anaheim 1" width="500px">
+<img src="Imagenes Readme/5.png" alt="Ilustración 5: Países que participaron en Anaheim 1" width="500px">
 
 #### 2.4 Suscripción
 Al final de cada sección deportiva, se ofrece la opción de suscribirse para recibir información actualizada sobre el deporte favorito del usuario.
