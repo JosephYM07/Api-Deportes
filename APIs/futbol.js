@@ -18,7 +18,7 @@ let team = document.querySelectorAll(".team");
         players(teamId[i], (team_name, players) => {
           team[i].innerHTML = team_name;
           team[i].addEventListener("click", () => {
-            player.innerHTML = "<h1>Jugadores</h1>";
+            player.innerHTML = "<h1>Lista de Jugadores</h1>";
             for (const item of players) {
               console.log(players);
               let p = document.createElement("p");
