@@ -100,7 +100,7 @@ La API de motocross se enfoca en obtener información sobre eventos deportivos e
 
 ## Enlaces - Personales
 
-- [Joseph Yépez](enlace_joseph)
+- [Joseph Yépez](https://github.com/JosephYM07)
 - [Jared Valenzuela](https://github.com/JaredVS777)
 - [Heyer Tinoco](https://github.com/OrlandH)
 - [Miguel Paredes](https://github.com/Miguel-Paredes)
