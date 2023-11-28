@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilos para los equipos */
+  .team {
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #c02c2c;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Colores para cada equipo */
+  .team:nth-child(1) {
+    background-color: #074896;
+  }
+  
+  .team:nth-child(2) {
+    background-color: #c5042c;
+  }
+  
+  .team:nth-child(3) {
+    background-color: #0039b3;
+  }
+  
+  .team:nth-child(4) {
+    background-color: #880f20;
+  }
+  
+  .team:nth-child(5) {
+    background-color: #0f734f;
+  }
+  
+  /* Estilos para los jugadores */
+  .players {
+    margin-top: 20px;
+    background-color: #fff; 
+    padding: 20px; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 20px; 
+  }
+  
+  .players h1 {
+    color: #000; 
+  }
+  
+  .players p {
+    margin: 5px 0;
+    color: #000; 
+  }
+  
