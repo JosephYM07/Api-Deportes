@@ -746,3 +746,43 @@ footer {
 }
 
 /***** End Media Queries Section *****/
+.containerfut {
+  display: grid;
+  grid-template-columns: 40vh;
+  grid-template-areas: "equipos jugadores";
+}
+
+.teams {
+  grid-area: equipos;
+  min-height: 10px;
+  font-size: 32px;
+  background: #ffffff;
+}
+
+.teams div {
+  color: #1d1d1d;
+  padding: 25px;
+}
+.teams div:hover {
+  background: #2bc74f;
+  cursor: pointer;
+}
+.teams div:active {
+  background: #5b6cd1;
+}
+.players {
+  opacity: 0.8;
+  min-height: 10%;
+  padding-top: auto;
+}
+
+.players p {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  background: #8b8b8b;
+  margin: 10px;
+
+  color: #fff;
+}
