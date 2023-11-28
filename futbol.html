@@ -191,6 +191,46 @@
 
   <!-- ========== Fin de la Sección del Pie de Página ========== -->
 
+<script>
+  // Hacer una solicitud a la API de la UEFA Champions League
+  fetch('https://api.football-data.org/v4/competitions/CL/matches', {
+    headers: {
+      'X-Auth-Token': 'tu_api_key', // Reemplaza 'tu_api_key' con tu clave de API
+    },
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Procesar la respuesta de la API y actualizar el contenido del blog
+      const blogContainer = document.getElementById('blogContainer');
+
+      data.matches.forEach(match => {
+        const blogItem = document.createElement('div');
+        blogItem.classList.add('blog');
+
+        const matchDate = new Date(match.utcDate);
+        const formattedDate = `${matchDate.getDate()} de ${matchDate.toLocaleString('es', { month: 'long' })} de ${matchDate.getFullYear()}`;
+
+        blogItem.innerHTML = `
+          <figure>
+            <img src="./images/default-image.jpg" alt="Imagen de fútbol" />
+          </figure>
+          <div class="blog-content">
+            <div class="blog-date">
+              <p><i class="fa-calendar fa-solid"></i> ${formattedDate}</p>
+              <p><i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <h3 class="section-common--title">
+              ${match.homeTeam.name} vs ${match.awayTeam.name}
+            </h3>
+          </div>
+        `;
+
+        blogContainer.appendChild(blogItem);
+      });
+    })
+    .catch(error => console.error('Error al obtener datos de la API:', error));
+</script>
+
 </body>
 
 </html>
