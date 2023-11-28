@@ -23,7 +23,7 @@ En esta sección, se presentan los aspectos más destacados del desarrollo de la
 ### 1. Página de Inicio
 La página de inicio fue diseñada para captar la atención del usuario, utilizando colores llamativos asociados a cada deporte (naranja para baloncesto, cian para fútbol y verde para motocross).
 
-<img src="Imagenes Readme/1.png" alt="Imagen de la plataforma" width="500px">
+<img src="Imagenes Readme/1.png" alt="Captura de Pantalla" style="width: 50%; height: auto;">
 
 
 ### 2. Sección de Deportes
